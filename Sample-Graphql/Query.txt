@@ -1,0 +1,44 @@
+query  {
+#   articles{ // To get all articles 
+#      id
+#      title
+     
+# }
+article(id:"69eb86d4197689be2382a89d"){ // To get particular article
+  title
+  id
+}
+}
+
+//Insert API
+mutation{
+    createArticle(articleinput :{ // insert 
+        title:"Java dev",
+        content :"Programming Lang"
+    }){   // send response of what we inserted
+        id    
+        title
+        content
+    }
+}
+
+//Update API
+
+mutation{
+  updateArticle(id:"69eb86d4197689be2382a89d",articleInput:  {
+     title:"Learn Mongodb and practice",
+     content:"Makes as Expertise"
+  }){
+    title
+    id
+    content
+  }
+}
+
+//Delete API 
+
+mutation{
+  deleteArticle(id:"69eb86d4197689be2382a89d" ) {
+    id title content
+  }
+}

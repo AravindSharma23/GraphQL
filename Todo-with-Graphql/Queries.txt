@@ -1,0 +1,59 @@
+Get All Todos :
+
+query  Example{
+  
+  getTodos {
+    id
+    title
+    detail
+  }
+  
+}
+
+Add single Todo :
+
+mutation{
+  addTodo(
+    title :"second todo"
+    detail : "second todo second todo second todo",
+    date : "2026-10-23"
+  ){
+    id
+    title
+    detail
+    date
+  }
+}
+
+Get Single Todo :
+
+query  Example{
+  
+  getTodo(id:"69f4196678eb293205ee9d1d") {
+    id
+    title
+    detail
+  }
+}
+
+Delete Todo :
+
+mutation{
+  deleteTodo(id:"69f4196678eb293205ee9d1d")
+}
+
+update Todo :
+
+mutation{
+  updateTodo(
+    id:"69f41b9e78eb293205ee9d1e"
+    title :"second todo1"
+    detail : "Now I am 1st Todo",
+    date : "2026-05-01"
+  ){
+    id
+    title
+    detail
+    date
+  }
+}
